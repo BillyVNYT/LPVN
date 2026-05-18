@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduQuiz VN - Đăng nhập</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="card">
+      <h1 class="title">EduQuiz VN</h1>
+      <p class="subtitle">Học qua trò chơi 🎮</p>
+
+      <div class="tabs">
+        <button class="tab active" onclick="showLogin()">Đăng nhập</button>
+        <button class="tab" onclick="showRegister()">Đăng ký</button>
+      </div>
+      <form id="loginForm" class="form">
+        <input type="email" placeholder="Email" required id="emaillogin"/>
+        <input type="password" placeholder="Mật khẩu" required id="passlogin"/>
+        <button type="button" onclick="login()">Vào học ngay</button>
+      </form>
+      <form id="registerForm" class="form hidden">
+        <input type="text" placeholder="Họ và tên" required id="nameregister"/>
+        <input type="email" placeholder="Email" required id="emailregister"/>
+        <input type="password" placeholder="Mật khẩu" required id="passregister"/>
+        <button type="button" onclick="register()">Tạo tài khoản</button>
+      </form>
+
+    </div>
+    <script type="module" src="./main.js"></script>
+  </div>
+</body>
+</html>
