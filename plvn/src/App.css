@@ -13,9 +13,22 @@ body {
 }
 
 #container1, #container2 {
+    align-items: flex-end;
     display: flex;
     gap: 10px;
     z-index: 2;
+}
+
+#line {
+    width: 5px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: -1;
 }
 
 .circle {
@@ -119,4 +132,36 @@ body {
     100% {
         transform: scaleY(1);
     }
+}
+
+@keyframes team1win {
+    0% {
+        transform: translateX(-25px);
+    }
+    50% {
+        transform: translateX(-45px);
+    }
+    100% {
+        transform: translateX(-25px);
+    }
+}
+
+@keyframes team2win {
+    0% {
+        transform: translateX(25px);
+    }
+    50% {
+        transform: translateX(45px);
+    }
+    100% {
+        transform: translateX(25px);
+    }
+}
+
+.team1better {
+    animation: team1win 1s infinite;
+}
+
+.team2better {
+    animation: team2win 1s infinite;
 }
