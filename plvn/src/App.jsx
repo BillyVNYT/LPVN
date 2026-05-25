@@ -37,7 +37,6 @@ function App() {
       <input type="number" value={p4}
         onChange={(e) => setP4(Number(e.target.value))}
       />
-      <div id='line'></div>
       <div id="container" className={win}>
         <div id="container1" style={{
           transform: `translateY(-${Math.max(p1, p2) * 2.25}px)`
